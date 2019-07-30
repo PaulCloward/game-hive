@@ -74,4 +74,56 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  ion-alert
+  {
+   --background: rgba(248,248,248, .92) !important;
+   --width: 95% !important;
+   --min-width: 95% !important;
+   text-align: center !important;
+   background-radius: 1em !important;
+   }
+
+  .popup-button, .popup-button-logout, .popup-button-cancel{
+       width: 100% !important;
+       padding-top: 1em !important;
+       padding-bottom: 1em !important;
+  }
+
+  .popup-button{
+    color: #000000 !important;
+    font-size: 20pt !important;
+    border-bottom: 2px solid #eaeaea !important;
+  }
+
+  .popup-button-logout{
+    color: #FF4A4A !important;
+    font-size: 20pt !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #eaeaea !important;
+  }
+
+  .popup-button-cancel{
+    color: #007AFF !important;
+    font-size: 22pt !important;
+  }
+
+  ion-popover{
+    ion-backdrop{
+      opacity: 0.5 !important;
+    }
+    .popover-wrapper{
+    .popover-content{
+      width:90vw;
+      max-width:90vw;
+      
+
+      }
+    }
+  }
+
+
 }
+
+
+

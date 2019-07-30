@@ -1,0 +1,104 @@
+<ion-content style="padding: 0em" *ngIf="currentScreenView == screenViewDefault">
+	<!--  -->
+	<ion-grid style="padding: 0em;">
+		<ion-row>
+			<ion-col style="padding: 0em">
+				<div class="search-bar-container">
+					<ion-row>
+						<ion-col style="padding-left: 1em; padding-right: 1em">
+							<button *ngIf="criteriaSelected == ''" class="search-bar" (click)="presentPopover($event)">
+								Search
+							</button>
+							<button *ngIf="criteriaSelected != ''" class="search-bar" (click)="presentPopover($event)">
+								{{criteriaSelected}}
+							</button>
+						</ion-col>
+						<!-- <ion-col size="2" style="display: flex; justify-content: center;">
+							<button class="btn-search" (click)="searchBoardGames()">
+								<ion-icon name="arrow-round-forward"></ion-icon>
+							</button>
+						</ion-col>	 -->
+					</ion-row>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<div class="selector-labels">
+					<label [ngClass]="currentSelector === selectorFeatured ? 'selected-label' : 'unselected-label'" (click)="currentSelector = selectorFeatured">Featured</label>
+					<label [ngClass]="currentSelector === selectorTrending ? 'selected-label' : 'unselected-label'" (click)="currentSelector = selectorTrending">Trending</label>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		
+		<ion-slides [options]="sliderConfigLarge" *ngIf="currentSelector == selectorFeatured">
+			<ion-slide class="large-image-slide">
+				<div class="img-holder" (click)="searchBoardGameCriteria()">
+					<img class="img-large" src="../../../assets/icon/icon_kickstarters_small.png" />
+					<div class="img-large-label">Kickstarters</div>
+				</div>
+			</ion-slide>
+			<ion-slide class="large-image-slide">
+				<div class="img-holder">
+					<img class="img-large" src="../../../assets/icon/icon_top_sellers_small.png" />
+					<div class="img-large-label">Top Sellers</div>
+				</div>
+			</ion-slide>
+			<!-- <ion-slide class="large-image-slide">
+				<div class="img-holder">
+					<img class="img-large" src="../../../assets/icon/icon_top_sellers_small.png" />
+					<div class="img-large-label">Top Sellers</div>
+				</div>
+			</ion-slide> -->
+		</ion-slides>
+
+		<br><br>
+
+
+		<ion-slides [options]="sliderConfigSmall" *ngIf="currentSelector == selectorFeatured">
+			<ion-slide class="small-image-slide">
+				<div class="img-holder">
+					<div class="img-gradient-2-4-players"></div>
+					<div class="img-small-label">
+						2 - 4
+						<br>
+						Players
+					</div>
+				</div>
+			</ion-slide>
+			
+			<ion-slide class="small-image-slide">
+				<div class="img-holder">
+					<div class="img-gradient-big-group-games"></div>
+					<div class="img-small-label">
+						<div>Big Groups</div>
+						<div>Games</div>
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slides>
+
+		<br><br><br><br>
+
+		<ion-list>
+			<div *ngFor="let game of foundGames">
+			  <ion-item class="item-container" (click)="onClickGame(game)">
+			  	<ion-grid>
+			  		<ion-row>
+			  			<ion-col size="5">
+						   <img class="icon-game" [src]="game.imgPath"/>
+			  			</ion-col>
+			  			<ion-col size="7">
+			  				<ion-label class="name">{{game.name}}</ion-label>
+			  				<ion-label class="description">Board Game + Expansions</ion-label>
+			  			</ion-col>
+					</ion-row>
+				</ion-grid>
+			  </ion-item>
+			</div>
+		</ion-list> 
+
+	</ion-grid>
+</ion-content>

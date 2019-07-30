@@ -1,0 +1,37 @@
+<ion-content>
+	<ion-tabs>
+		  <ion-tab-bar slot="bottom">
+		    <ion-tab-button tab="discover-tab" (click)="selectedTab = TAB_HIVE">
+		       <!-- <img class="img-scores" src="assets/icon/discover_active.png" *ngIf="selectedTab == TAB_DISCOVER" />
+		      <img class="img-scores" src="assets/icon/discover_inactive.png" *ngIf="selectedTab != TAB_DISCOVER" /> -->
+		      <div [ngClass]="selectedTab == TAB_HIVE ? 'tab-circle-selected' : 'tab-circle-unselected'"></div>
+		      <ion-label>Hive</ion-label>
+		    </ion-tab-button>
+
+		    <ion-tab-button tab="search-tab" (click)="selectedTab = TAB_SEARCH">
+		      <!-- <img class="img-scores" src="assets/icon/scores_active.png" *ngIf="selectedTab == TAB_SEARCH" />
+		      <img class="img-scores" src="assets/icon/scores_inactive.png" *ngIf="selectedTab != TAB_SEARCH" /> -->
+		      <div [ngClass]="selectedTab == TAB_SEARCH ? 'tab-circle-selected' : 'tab-circle-unselected'"></div>
+		      <ion-label>Discover</ion-label>
+		    </ion-tab-button>
+
+
+		    <ion-tab-button tab="tools-tab" (click)="selectedTab = TAB_TOOLS">
+		      <!-- <img class="img-scores" src="assets/icon/feedback_active.png" *ngIf="selectedTab == TAB_TOOLS" />
+		      <img class="img-scores" src="assets/icon/feedback_inactive.png" *ngIf="selectedTab != TAB_TOOLS" /> -->
+		      <div [ngClass]="selectedTab == TAB_TOOLS ? 'tab-circle-selected' : 'tab-circle-unselected'"></div>
+		      <ion-label>Tools</ion-label>
+		    </ion-tab-button>
+		 	
+		    
+		    <ion-tab-button tab="profile-tab" (click)="selectedTab = TAB_PROFILE">
+		        <!-- <img class="img-scores" src="assets/icon/profile_active.png" *ngIf="selectedTab == TAB_PROFILE" />
+		      	<img class="img-scores" src="assets/icon/profile_inactive.png" *ngIf="selectedTab != TAB_PROFILE" /> -->
+		      	<div [ngClass]="selectedTab == TAB_PROFILE ? 'tab-circle-selected' : 'tab-circle-unselected'"></div>
+		        <ion-label>Profile</ion-label>
+		    </ion-tab-button>
+		  </ion-tab-bar>
+	</ion-tabs>
+</ion-content>
+
+

@@ -9,3 +9,32 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+.top-title{
+	font-size: 35pt;
+	font-weight: bolder;
+	color: #000000;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: .2em;
+}
+
+@font-face {
+  font-family: sf_pro_bold;
+  src: url(/assets/fonts/sf_pro/sf_pro_bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: sf_pro_semi_bold;
+  src: url(/assets/fonts/sf_pro/SF-Pro-Text-Semibold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: sf_pro_regular;
+  src: url(/assets/fonts/sf_pro/SF-Pro-Text-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: sf_pro_medium;
+  src: url(/assets/fonts/sf_pro/SF-Pro-Text-Medium.otf) format('truetype');
+}

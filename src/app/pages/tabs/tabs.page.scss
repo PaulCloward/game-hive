@@ -1,0 +1,26 @@
+.img-scores{
+	width: 30px;
+}
+
+.tab-selected{
+  //background: #3772FF !important;
+  color: black !important;
+  //width: 1em !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder !important;
+}
+
+.tab-circle-selected, .tab-circle-unselected{
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 100%;
+	margin-bottom: .2em;
+}
+
+.tab-circle-selected{
+	background-color: #000;
+}
+
+.tab-circle-unselected{
+	background-color: #ededed;
+}

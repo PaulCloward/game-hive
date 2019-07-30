@@ -1,0 +1,33 @@
+.game-score-container{
+	background-color: #F7F7F7;
+	border-top: 1pt solid #707070;
+	border-bottom: 1pt solid #707070;
+	padding: .5em 0em;
+}
+
+.game-name{
+	text-align: left;
+	font-size: 20pt;
+	color: #000;
+}
+
+.game-date{
+	text-align: left;
+	font-size: 12pt;
+	color: #000;
+}
+
+.non-complete-game, .complete-game{
+	border-radius: 100%;
+	width: 3em;
+	height: 3em;
+	margin: 0 auto;
+}
+
+.non-complete-game{
+	background-color: #C1C1C1;
+}
+
+.complete-game{
+	background-color: blue;
+}

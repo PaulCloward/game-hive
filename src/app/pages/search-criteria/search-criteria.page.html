@@ -1,0 +1,115 @@
+<ion-content>
+	<ion-grid style="padding: 0em">
+		<ion-row style="padding: 0em">
+			<ion-col style="padding: 0em">
+				<div class="header">Games, Creators, Friends...</div>
+				<div class="header-divider-line"></div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 1 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('trending')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_trending_small.png'"></ion-img>
+					<div class="image-label-half">Trending Games</div>
+				</div>
+			</ion-col>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('best-sellers')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_best_sellers_small.png'"></ion-img>
+					<div class="image-label-half">Best Sellers</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 2 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('recommended-for-you')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_recommended_small.png'"></ion-img>
+					<div class="image-label-full">Recommended for You</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 3 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('kickstarters')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_kickstarters_small_2.png'"></ion-img>
+					<div class="image-label-half">Kickstarters</div>
+				</div>
+			</ion-col>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('family')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_kids_and_family_small.png'"></ion-img>
+					<div class="image-label-half">
+						Kids and Family
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 4 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('college')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_college_party_small.png'"></ion-img>
+					<div class="image-label-half">
+						College Party
+					</div>
+				</div>
+			</ion-col>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('experts')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_experts_and_geeks_small.png'"></ion-img>
+					<div class="image-label-half">
+						Experts & Geeks
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 5 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('small-group')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_small_group_small.png'"></ion-img>
+					<div class="image-label-half">
+						<div>Small Group</div>
+						<div>(1 - 4)</div>
+					</div>
+				</div>
+			</ion-col>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('cheap')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_20_and_under_small.png'"></ion-img>
+					<div class="image-label-half">
+						$20 and Under
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<!-- Row 6 -->
+		<ion-row>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('random')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_random_game_small.png'"></ion-img>
+					<div class="image-label-half">
+						Random Game
+					</div>
+				</div>
+			</ion-col>
+			<ion-col>
+				<div class="image-container" (click)="onSelectCriteria('clearance')">
+					<ion-img class="img-half"  [src]="'../../../assets/icon/icon_clearance_small.png'"></ion-img>
+					<div class="image-label-half">
+						Clearance
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

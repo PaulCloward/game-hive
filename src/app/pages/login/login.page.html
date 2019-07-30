@@ -1,0 +1,33 @@
+<ion-content>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<div class="auth-header">
+					Sign In
+				</div>
+			</ion-col>
+		</ion-row>
+		<form>
+			<ion-row style="margin-top: 10em">
+				<ion-col>
+					<input class="auth-input" [(ngModel)]="email" name="email" placeholder="Email" type="Email" />
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<input class="auth-input" [(ngModel)]="password" name="password" placeholder="Password" type="Password" />
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<button class="btn-login" (click)="login(email,password)">Login</button>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<span class="no-account">Don't have an Account?</span><span class="sign-up" (click)="clickSignUpPage()"> Sign Up Here</span>
+				</ion-col>
+			</ion-row>
+		</form>
+	</ion-grid>
+</ion-content>

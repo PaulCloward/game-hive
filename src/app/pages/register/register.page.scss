@@ -1,0 +1,40 @@
+.auth-header{
+	text-align: center;
+	font-size: 28pt;
+	font-weight: bold;
+	color: #000000;
+	margin-top: 1em;
+}
+
+.auth-input{
+	width: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #c1c1c1;
+	padding: .3em;
+	font-size: 1.2em;
+	margin-bottom: .5em;
+}
+
+::placeholder{
+	font-size: 1.2em;
+}
+
+.btn-register{
+	color: white;
+	font-size: 1.2em;
+	width: 100%;
+	background-color: blue;
+	border-radius: 4px;
+	padding-top: .6em;
+	padding-bottom: .6em;
+}
+
+.has-account{
+	color:gray;
+}
+
+.sign-in{
+	font-weight: 500;
+	color: blue;
+}

@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="top-title">Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="class-container">
+		<div class="bold-header">
+			Hey, we could use your help.
+		</div>
+
+		<div class="italic-question">
+			Why do you like board & card games?
+		</div>
+
+		<ion-textarea class="feedback-answer" rows="4" placeholder="Your answer here" [(ngModel)]="mFeedbackObject.whyLike" maxLength="600"></ion-textarea>
+		
+
+		<div class="italic-question">
+			What’s your biggest complaint about board & card games?
+		</div>
+
+		<ion-textarea class="feedback-answer" rows="4" [(ngModel)]="mFeedbackObject.biggestComplaint" placeholder="Your answer here" maxLength="600"></ion-textarea>
+
+		<div class="italic-question">
+			If you could change one thing about board / card games, what would it be? 
+		</div>
+
+		
+		<ion-textarea class="feedback-answer" rows="4" [(ngModel)]="mFeedbackObject.changeOneThing" placeholder="Your answer here" maxLength="600"></ion-textarea>
+	
+
+		<div class="italic-question">
+			What would make playing board / card games 10x better? 
+		</div>
+
+		
+		<ion-textarea class="feedback-answer" rows="4" placeholder="Your answer here" [(ngModel)]="mFeedbackObject.whatMake10TimesBetter" maxLength="600"></ion-textarea>
+		
+
+
+	  <ion-grid>
+	  	<ion-row>
+	  		<ion-col size="6" offset="3">
+			  <button class="btn-submit" (click)="submitFeedback()">
+			  	Submit
+			  </button>
+			</ion-col>
+		</ion-row>
+	  </ion-grid>
+
+	  <div class="thank-you">
+	  	Thank you so much for your help! 
+	  </div>
+	  <div class="ran-by">
+	  	This app is built and ran by…
+	  </div>
+
+	  <div class="ran-by-names">
+	  	Paul Cloward & Ryan Shumway
+	  </div>
+
+	  <div class="team-description">
+	  	We’re a two person team that loves board games and want to make the experience better. Thanks again for helping us out.
+	  </div>
+
+	  <div class="blue-line-divider"></div>
+
+	  <div class="regular-question">Can we contact you to ask you about your answers?</div>
+
+	  <div class="blue-line-divider"></div>
+
+	  <div class="regular-question">Sweet thanks!</div>
+
+
+	</div>
+</ion-content>

@@ -1,0 +1,162 @@
+<ion-header *ngIf="pageRouter == PAGE_LANDING">
+  <ion-toolbar>
+    <ion-title class="top-title">Scores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+	<div *ngIf="pageRouter == PAGE_LANDING">
+		<div *ngFor="let game of playersAssociatedGames" >
+			<app-game-display  [game]="game" (click)="onSelectGame(game)"></app-game-display>
+		</div>
+	</div>
+
+	<ion-grid *ngIf="pageRouter == PAGE_GAME_SELECTED" no-padding>
+		<ion-row>
+			<ion-col class="player-listing-toolbar-column">
+				<div class="player-listing-toolbar">
+					<div class="btn-back-container" (click)="pageRouter = PAGE_LANDING">
+					    <ion-icon class="btn-back" name="arrow-back"></ion-icon>
+					</div>
+					 <div class="player-listing-toolbar-title">{{selectedGame.name}}</div>
+					 <div class="menu-container">
+					    <div class="menu-bar"></div>
+					    <div class="menu-bar"></div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<div *ngIf="pageRouter == PAGE_GAME_SELECTED">
+		<div *ngFor="let playerScore of selectedGamePlayerAmount; let i = index">
+			<app-player-score [playerNumber]="i" (click)="onClickPlayer()"></app-player-score>
+		</div>
+	</div>	
+
+	<!-- Create New Game Pop Up -->
+	<ion-grid *ngIf="pageRouter == PAGE_NEW_GAME" class="create-new-game-pop-up-position">
+		<ion-row style="padding: 0em">
+			<ion-col class="create-new-game-pop-up-column">
+				<div class="create-new-game-pop-up">
+					<ion-row>
+						<ion-col>
+							<div class="pop-up-header">
+								Game Name
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<input class="input-pop-up" type="text" [(ngModel)]="gameName" />
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<div class="pop-up-header">
+								How many players?
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<input class="input-pop-up" type="number" [(ngModel)]="playerAmount" />
+						</ion-col>
+						<ion-col>
+							<div style="display: relative">
+								<div class="btn-num-player-button-container" (click)="addOnePlayer()">
+									+
+								</div>
+								<div class="btn-num-player-button-container" (click)="subtractOnePlayer()" style="margin-left: .2em">
+									-
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row style="margin-top: .4em; align-items: center;">
+						<ion-col>
+							<div class="btn-continue" (click)="pageRouter = PAGE_CONTINUE_NEW_GAME">Continue</div>
+						</ion-col>
+						<ion-col>
+							<div class="btn-cancel" (click)="pageRouter = PAGE_LANDING">Cancel</div>
+						</ion-col>
+					</ion-row>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid *ngIf="pageRouter == PAGE_CONTINUE_NEW_GAME" class="create-new-game-pop-up-position">
+		<ion-row style="padding: 0em">
+			<ion-col class="create-new-game-pop-up-column">
+				<div class="create-new-game-pop-up">
+					<ion-row>
+						<ion-col>
+							<div class="pop-up-header">
+								Game Type
+							</div>
+						</ion-col>
+					</ion-row>				
+					<ion-row>
+						<ion-col>
+							<button [ngClass]="{
+									  'btn-game-type-selected': gameTypeSinglePlay,
+									  'btn-game-type-unselected': !gameTypeSinglePlay
+									}" (click)="gameTypeSinglePlay = true">
+								Single Play
+							</button> 
+						</ion-col>
+					</ion-row>
+					<ion-row *ngIf="gameTypeSinglePlay">
+						<ion-col>
+							<div class="by-ongoing-description">
+								By “Single Play”, we mean a single sit down, play, and finish game. The game doesn’t continue after one sit down. Settlers of Catan, Ticket to Ride, Monopoly would fall under this category.
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<button [ngClass]="{'btn-game-type-selected': !gameTypeSinglePlay,'btn-game-type-unselected': gameTypeSinglePlay}" (click)="gameTypeSinglePlay = false">
+								Ongoing
+							</button> 
+						</ion-col>
+					</ion-row>
+					<ion-row *ngIf="!gameTypeSinglePlay">
+						<ion-col>
+							<div class="by-ongoing-description">
+								By “Ongoing”, we mean a game where you want to have a running / continuous score. You can play in one setting, and then pick it up another evening. This is ideal if you want to have a record of wins vs. loses
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row style="margin-top: .4em; align-items: center;">
+						<ion-col>
+							<div class="btn-continue-2" (click)="pageRouter = PAGE_LANDING" (click)="addGame()">Continue</div>
+						</ion-col>
+						<ion-col>
+							<div class="btn-cancel" (click)="pageRouter = PAGE_LANDING">Cancel</div>
+						</ion-col>
+					</ion-row>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar no-border>
+  	<ion-grid>
+    <ion-row style="margin-bottom: 1em; align-items: center" *ngIf="pageRouter == PAGE_LANDING">
+			<ion-col size="1"></ion-col>
+			<ion-col size="10" >
+				<div class="btn-new-game"  (click)="pageRouter = PAGE_NEW_GAME">
+					<img class="icon_new_game" src="assets/icon/new_game_2.png" />
+					<div class="new-game-label">
+						New Game
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+  </ion-toolbar>
+</ion-footer>

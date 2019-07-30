@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-grid>
+	  <ion-row>
+	    <!-- <ion-col> -->
+	    <ion-title class="top-title">
+	    	@username
+		</ion-title>
+		<img class="img-gear" src="assets/icon/gear.png" (click)="presentAlertMultipleButtons()" />
+	  </ion-row>
+	</ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid class="profile-content-container">
+		<ion-row style="align-self: center">
+			<ion-col size="12">
+				<div style="display: inline-flex" >
+					<div class="profile-image-blank"></div>
+					<div class="name-label">{{email}}</div>
+				</div>
+			</ion-col>
+			<ion-col size="5">
+				
+			</ion-col>
+		</ion-row>
+		<ion-row style="margin-top: 2em;">
+			<ion-col size="5">
+				<div class="completed-games-label">Completed Games</div>
+				<div class="completed-games-value">12</div>
+			</ion-col>
+			<ion-col size="5">
+				<div class="friends-label">Friends</div>
+				<div class="friends-value">32</div>
+			</ion-col>
+
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<div class="how-to-make-better-experience">
+					How can we make the board game experience better? Click here to give us feedback
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

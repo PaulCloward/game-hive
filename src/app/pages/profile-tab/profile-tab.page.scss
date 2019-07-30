@@ -1,0 +1,70 @@
+.profile-content-container{
+	padding: 2em;
+}
+
+.top-title{
+	font-size: 25pt;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: .2em;
+	font-family: Arial;
+}
+
+.toolbar-icon{
+	font-size: 12pt;
+	float: right;
+	width: 100%;
+}
+
+.img-gear{
+	float: right;
+	margin-top: 1.8em;
+	margin-right: .2em;
+	width: 3em;
+	height: 3em;
+	cursor: pointer;
+}
+
+.profile-image-blank{
+	width: 5em;
+	height: 5em;
+	border-radius: 100%;
+	border: 1pt solid #707070;
+	margin: 0 auto;
+}
+
+.name-label{
+	font-size: 20pt;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 1em;
+	margin-left: .5em;
+}
+
+.completed-games-label, .friends-label{
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+}
+	
+.completed-games-value, .friends-value{
+	font-size: 22pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.how-to-make-better-experience{
+	color: #A8A8A8;
+	font-size: 15pt;
+	font-weight: 400;
+	border: 2pt solid #A8A8A8;
+	border-radius: 4pt;
+	padding: .4em;
+	margin-top: 8em;
+}
+
+*{
+	font-family: Arial, serif;
+}

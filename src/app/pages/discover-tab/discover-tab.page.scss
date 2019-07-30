@@ -1,0 +1,55 @@
+
+.input-discover{
+	width: 100%;
+	padding: 1em;
+	border-radius: 5pt;
+	box-shadow: 0px 3px 6pt rgba(0,0,0, .16);
+	outline: none;
+	border: none;
+	font-weight: bold;
+	font-size: 15pt;
+	color: #000;
+}
+
+::placeholder{
+	font-weight: bold;
+	font-size: 15pt;
+	color: #000;
+}
+
+.discover-header{
+	color: #000000;
+	font-size: 15pt;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+ion-title{
+	text-align: center;
+	font-size: 25pt;
+	font-weight: bold;
+	color: #000;
+	padding: .5em 1em;
+}
+
+.page-content{
+	border: none;
+	padding: 2em;
+	margin-bottom: 5em;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+    background-color: #E8E8E8;
+	height: 90pt;
+	width: 160pt;
+	margin-right: 2em;
+	border-radius: 5pt;
+  }
+}

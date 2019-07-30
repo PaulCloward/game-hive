@@ -1,0 +1,82 @@
+
+.bold-header{
+	font-size: 28pt;
+	font-weight: bolder;
+	color: #000000;
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+.italic-question{
+	font-size: 20pt;
+	font-style: italic;
+	color: #000;
+}
+
+.regular-question{
+	font-size: 20pt;
+	color: #000;
+}
+
+.class-container{
+	padding: 1em;
+}
+
+.feedback-answer{
+	border: 2pt solid #C1C1C1;
+	border-radius: 4pt;
+	padding: .5em;
+	width: 100%;
+	box-shadow: none;
+	margin-bottom: 2em;
+	color: black;
+	font-size: 1em;
+}
+
+.thank-you, .ran-by{
+	font-weight: medium;
+	text-align: left;
+	font-size: 18pt;
+}
+
+.thank-you{
+	color: #007AFF;
+} 
+
+.ran-by{
+	color: #000;
+}
+
+.ran-by-names{
+	font-size: 15pt;
+	font-weight: bold;
+	color: #007AFF;
+	text-align: center;
+	margin: 1.5em 0em;
+}
+
+.team-description{
+	text-align: left;
+	font-weight: 300;
+	font-size: 15pt;
+	color: #000;
+	
+}
+
+.blue-line-divider{
+	height: 0em;
+	border: 1pt solid #007AFF;
+	width: 20%;
+	margin: 1.5em 0;
+}
+
+.btn-submit{
+	border-radius: 5px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 1em;
+	background-color: #24a0ed;
+	font-size: 2em;
+	padding: .5em;
+}

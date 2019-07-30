@@ -1,0 +1,17 @@
+<ion-row>
+	<ion-col size="10" offset="1">
+		<div class="player-score-container">
+			<ion-row>
+				<ion-col class="player-icon-column" size="2">
+					<div [ngClass]="{'player-icon-selected': iconSelected, 'player-icon-unselected': !iconSelected}" (click)="onClickPlayerIcon()">
+
+					</div>
+				</ion-col>
+				<ion-col class="name-column" size="6">
+					<div class="player-name">name</div>
+				</ion-col>
+				
+			</ion-row>
+		</div>
+	</ion-col>
+</ion-row> 

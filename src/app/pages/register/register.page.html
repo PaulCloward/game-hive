@@ -1,0 +1,41 @@
+<ion-content>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<div class="auth-header">
+					Create Account
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row style="margin-top: 10em">
+			<ion-col>
+				<input class="auth-input" [(ngModel)]="username" placeholder="Username" type="text" />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<input class="auth-input" [(ngModel)]="email" placeholder="Email" type="Email" />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<input class="auth-input" [(ngModel)]="password" placeholder="Password" type="Password" />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<input class="auth-input" [(ngModel)]="confirmPassword" placeholder="Confirm Password" type="Password" />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<button class="btn-register" (click)="onClickRegister()">Register</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<span class="has-account">Already have an Account?</span><span class="sign-in" (click)="clickSignInPage()"> Sign In Here</span>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
